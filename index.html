@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Monalisa's Profile Card</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+</head>
+
+<body>
+    <!-- Profile Card -->
+    <article data-testid="test-profile-card">
+        <figure>
+            <a href="images/avatar.jpg" target="_blank" rel="noopener noreferrer">
+                <img src="images/avatar.jpg" alt="Profile picture of Geraldine" data-testid="test-user-avatar" />
+            </a>
+            <figcaption>
+                <!-- <label for="avatarUpload" class="upload-btn" tabindex="0">📸 Change Photo</label>
+                <input type="file" id="avatarUpload" accept="image/*" /> -->
+                <div class="deskpage-links">
+                    <button onclick="window.location.href='contact.html'" class="nav-btn">Contact Me</button>
+                    <button onclick="window.location.href='about.html'" class="nav-btn">About Me</button>
+                </div>
+
+            </figcaption>
+        </figure>
+
+        <div class="profile-content">
+            <header>
+                <h2 data-testid="test-user-name" aria-label="Geraldine Ugonabo">Geraldine Ugonabo</h2>
+            </header>
+
+            <p data-testid="test-user-bio">
+                I’m a passionate frontend developer who loves creating clean, responsive,
+                and accessible user interfaces that make people’s digital lives easier and more enjoyable.
+            </p>
+
+            <p data-testid="test-user-time" id="time"></p>
+
+            <nav data-testid="test-user-social-links" aria-label="Social media links">
+                <ul>
+                    <li><a href="https://x.com/GUgonabo" target="_blank" rel="noopener noreferrer"
+                            data-testid="test-user-social-twitter" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i> </a></li>
+                    <li><a href="https://github.com/Gerald-2-ine" target="_blank" rel="noopener noreferrer"
+                            data-testid="test-user-social-github" aria-label="GitHub"> <i class="fab fa-github"></i>
+                        </a>
+                    </li>
+                    <li><a href="https://www.linkedin.com/in/geraldine-ugonabo" target="_blank"
+                            rel="noopener noreferrer" data-testid="test-user-social-linkedin" aria-label="LinkedIn"><i
+                                class="fab fa-linkedin"></i></a></li>
+                </ul>
+            </nav>
+
+            <section data-testid="test-user-hobbies">
+                <h3>Hobbies</h3>
+                <ul>
+                    <li>Journaling🧘‍♀️</li>
+                    <li>Listening to music💃</li>
+                    <li>Reading self-growth books📚</li>
+                    <li>Exploring🤩</li>
+                    <li>Traveling😎</li>
+                    <li>Cooking😋</li>
+                    <li>Sketching clothing designs😍</li>
+                </ul>
+            </section>
+
+            <section data-testid="test-user-dislikes">
+                <h3>Dislikes</h3>
+                <ul>
+                    <li>Procrastination 😅</li>
+                    <li>Messy code 😒</li>
+                    <li>Disrespect 😡</li>
+                    <li>Injustice 😡</li>
+                    <li>Negativity 😠</li>
+                    <li>Poorly cooked meals 🤮</li>
+                </ul>
+            </section>
+        </div>
+        <div class="page-links">
+            <button onclick="window.location.href='contact.html'" class="nav-btn">Contact Me</button>
+            <button onclick="window.location.href='about.html'" class="nav-btn">About Me</button>
+        </div>
+
+    </article>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

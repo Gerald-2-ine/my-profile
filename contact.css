@@ -1,0 +1,231 @@
+/* ========== Global Reset ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #c9d6ff 0%, #e2e2e2 100%);
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 1.5rem;
+}
+
+/* ========== Contact Section ========== */
+.contact-section {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  max-width: 550px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+  transition: all 0.3s ease-in-out;
+}
+
+.contact-section h1 {
+  font-size: 1.8rem;
+  color: #222;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* ========== Form ========== */
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-weight: 500;
+  color: #222;
+  margin-bottom: 0.5rem;
+}
+
+input,
+textarea {
+  padding: 0.8rem;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #6a9df8;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(106, 157, 248, 0.2);
+}
+
+/* ========== Buttons ========== */
+button[type="submit"] {
+  background-color: #6a9df8;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease-in-out;
+}
+
+button[type="submit"]:hover,
+button[type="submit"]:focus {
+  background-color: #4e83e4;
+  transform: translateY(-2px);
+}
+
+/* ========== Error & Success Messages ========== */
+.error {
+  color: #ff3b3b;
+  font-size: 0.85rem;
+  margin-top: 0.3rem;
+}
+
+.success {
+  color: #2d9b45;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+/* ========== Back Button ========== */
+.back-btn {
+  margin-top: 1.5rem;
+  background: transparent;
+  border: 2px solid #6a9df8;
+  color: #6a9df8;
+  padding: 0.6rem 1.2rem;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.back-btn:hover {
+  background-color: #6a9df8;
+  color: white;
+}
+
+/* Shake Animation */
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { transform: translateX(-10px); }
+  40%, 80% { transform: translateX(10px); }
+}
+
+.shake {
+  animation: shake 0.5s ease;
+}
+
+/* ========== Success Modal Popup ========== */
+#success-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+#success-modal.show {
+  display: flex;
+}
+
+#success-modal.visible {
+  opacity: 1;
+}
+
+#success-modal .modal-content {
+  background: #ffffff;
+  color: #222;
+  padding: 1.8rem 2rem;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  animation: pop 0.3s ease;
+  width: 90%;
+  max-width: 420px;
+  border-top: 5px solid #6a9df8;
+}
+
+#success-modal .modal-content p {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+#success-modal .modal-content button {
+  margin-top: 1.2rem;
+  padding: 0.6rem 1.5rem;
+  border: none;
+  background: #6a9df8;
+  color: white;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#success-modal .modal-content button:hover {
+  background: #4e83e4;
+  transform: translateY(-2px);
+}
+
+/* Modal animation */
+@keyframes pop {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+
+/* ========== Tablet and Up ========== */
+@media (min-width: 768px) {
+  .contact-section {
+    padding: 2.5rem 3rem;
+  }
+
+  .contact-section h1 {
+    font-size: 2rem;
+  }
+
+  input,
+  textarea {
+    font-size: 1.05rem;
+  }
+
+  button {
+    font-size: 1.05rem;
+  }
+}

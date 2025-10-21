@@ -1,0 +1,312 @@
+/* ========== Global Reset ========== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(135deg, #c9d6ff 0%, #e2e2e2 100%);
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 1.5rem;
+}
+
+/* ========== Profile Card ========== */
+article[data-testid="test-profile-card"] {
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    max-width: 700px;
+    width: 100%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Hover effect */
+article[data-testid="test-profile-card"]:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* ========== Avatar ========== */
+figure {
+    margin-bottom: 1rem;
+}
+
+img[data-testid="test-user-avatar"] {
+    width: 175px;
+    height: 175px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #6a9df8;
+    transition: transform 0.3s;
+}
+
+img[data-testid="test-user-avatar"]:hover {
+    transform: scale(1.05);
+}
+
+figure a {
+    display: inline-block;
+    border-radius: 50%;
+    outline: none;
+}
+
+figure a:focus img {
+    outline: 3px solid #6a9df8;
+    outline-offset: 4px;
+    transform: scale(1.05);
+    transition: all 0.2s ease-in-out;
+}
+
+.upload-btn {
+    display: inline-block;
+    margin-top: 0.5rem;
+    background-color: #6a9df8;
+    color: white;
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.upload-btn:hover,
+.upload-btn:focus {
+    background-color: #4e83e4;
+    outline: 2px solid #4e83e4;
+    outline-offset: 2px;
+}
+
+#avatarUpload {
+    display: none;
+}
+
+/* ========== Name & Bio ========== */
+h2[data-testid="test-user-name"] {
+    font-size: 1.9rem;
+    color: #222;
+    margin-top: 0.5rem;
+}
+
+p[data-testid="test-user-bio"] {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    font-size: 1rem;
+    color: #444;
+    margin: 1rem 0;
+    line-height: 1.6;
+}
+
+/* ========== Time ========== */
+p[data-testid="test-user-time"] {
+    font-weight: 600;
+    color: #6a9df8;
+    margin-bottom: 2rem;
+}
+
+/* ========== Social Links ========== */
+nav[data-testid="test-user-social-links"] ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 3rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    background-color: #6a9df8;
+    padding: 0.8rem 1rem;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    transition: all 0.3s;
+    width: 45px;
+    height: 45px;
+}
+
+nav a i {
+    pointer-events: none;
+    /* ensures icon doesn’t block clicks */
+}
+
+nav a:focus {
+    outline: 3px solid #4e83e4;
+    outline-offset: 4px;
+    background-color: #5f97ff;
+    color: #fff;
+    transform: scale(1.05);
+    transition: all 0.2s ease-in-out;
+}
+
+nav a:hover {
+    background-color: #4e83e4;
+    transform: scale(1.1);
+}
+
+nav a[data-testid="test-user-social-twitter"] {
+    background-color: #1da1f2;
+}
+
+nav a[data-testid="test-user-social-github"] {
+    background-color: #24292e;
+}
+
+nav a[data-testid="test-user-social-linkedin"] {
+    background-color: #0077b5;
+}
+
+/* ========== Lists (Hobbies & Dislikes) ========== */
+section {
+    margin: 1.2rem 0;
+    width: 100%;
+}
+
+section h3 {
+    font-size: 1.2rem;
+    color: #222;
+    margin-bottom: 0.7rem;
+    border-left: 4px solid #6a9df8;
+    padding-left: 0.5rem;
+}
+
+section ul {
+    list-style: none;
+    padding-left: 0;
+    color: #555;
+    text-align: left;
+}
+
+section ul li {
+    background: rgba(106, 157, 248, 0.1);
+    border-radius: 8px;
+    padding: 0.4rem 0.8rem;
+    margin-bottom: 0.4rem;
+    transition: background 0.3s;
+}
+
+section ul li:hover {
+    background: rgba(106, 157, 248, 0.2);
+}
+
+.page-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.nav-btn {
+    background-color: #6a9df8;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    padding: 0.7rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.nav-btn:hover {
+    background-color: #4e83e4;
+    transform: translateY(-2px);
+}
+
+.deskpage-links {
+    display: none;
+}
+
+/* ========== Responsive Layout ========== */
+@media (min-width: 768px) {
+    article[data-testid="test-profile-card"] {
+        flex-direction: row;
+        align-items: flex-start;
+        text-align: left;
+        padding: 2.5rem;
+        height: auto;
+        min-height: 420px;
+    }
+
+    figure {
+        flex-shrink: 0;
+        margin-right: 2.5rem;
+        margin-bottom: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    img[data-testid="test-user-avatar"] {
+        width: 250px;
+        height: 250px;
+        border-radius: 16px;
+    }
+
+    .deskpage-links {
+        display: flex;
+        gap: 0.8rem;
+        margin-top: 55rem;
+    }
+
+    .upload-btn {
+        display: inline-block;
+        margin-top: 0.5rem;
+        background-color: #6a9df8;
+        color: white;
+        padding: 0.4rem 1rem;
+        border-radius: 20px;
+        font-size: 0.9rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .upload-btn:hover,
+    .upload-btn:focus {
+        background-color: #4e83e4;
+        outline: 2px solid #4e83e4;
+        outline-offset: 2px;
+    }
+
+    .profile-content {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    #avatarUpload {
+        display: none;
+    }
+
+    nav[data-testid="test-user-social-links"] ul {
+        justify-content: flex-start;
+    }
+
+    section ul {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 0.5rem;
+    }
+    .page-links{
+        display: none;
+    }
+}

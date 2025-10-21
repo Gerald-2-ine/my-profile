@@ -1,0 +1,143 @@
+/* General Page Layout */
+body {
+  font-family: "Poppins", sans-serif;
+  background: #f5f8ff;
+  color: #222;
+  margin: 0;
+  padding: 0;
+  line-height: 1.7;
+  display: flex;
+  justify-content: center;
+}
+
+main[data-testid="test-about-page"] {
+  max-width: 800px;
+  width: 90%;
+  margin: 3rem auto;
+  background: #fff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  border-radius: 16px;
+  padding: 2rem;
+  transition: transform 0.3s ease;
+}
+
+main[data-testid="test-about-page"]:hover {
+  transform: scale(1.01);
+}
+
+/* Profile Card Section */
+.profile-card {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.profile-card figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-card img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #6a9df8;
+}
+
+.profile-card figcaption {
+  margin-top: 0.8rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.profile-card p {
+  font-size: 1rem;
+  color: #555;
+  margin-top: 0.3rem;
+}
+
+/* Section Styling */
+section {
+  background-color: #f8faff;
+  border-left: 4px solid #6a9df8;
+  border-radius: 12px;
+  padding: 1.2rem 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+section:hover {
+  transform: translateY(-3px);
+}
+
+section h2 {
+  color: #4e83e4;
+  font-size: 1.2rem;
+  margin-bottom: 0.6rem;
+}
+
+section p {
+  font-size: 0.98rem;
+  color: #444;
+  margin: 0;
+  word-wrap: break-word; /* prevents long text from breaking layout */
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+footer a {
+  text-decoration: none;
+  color: #4e83e4;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+footer a:hover,
+footer a:focus {
+  color: #2c64d5;
+  text-decoration: underline;
+}
+
+/* Back Button */
+.back-btn {
+  display: inline-block;
+  background-color: #6a9df8;
+  color: #fff;
+  padding: 0.7rem 1.4rem;
+  border-radius: 30px;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+.back-btn:hover,
+.back-btn:focus {
+  background-color: #4e83e4;
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  outline: none;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  main[data-testid="test-about-page"] {
+    padding: 1.5rem;
+  }
+
+  section {
+    padding: 1rem 1.2rem;
+  }
+
+  .profile-card img {
+    width: 120px;
+    height: 120px;
+  }
+}
