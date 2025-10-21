@@ -102,7 +102,7 @@ Twitter - https://x.com/GUgonabo?t=f9Vo13jQphZt-2L0TqG6-w&s=09
 
 GitHub - https://github.com/Gerald-2-ine/my-profile
 
-LinkedIn - https://www.linkedin.com/in/geraldine-ugonabo
+LinkedIn - https://www.linkedin.com/in/geraldine-ugonabo-523b17291?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app
 
 💭 Reflections
 
