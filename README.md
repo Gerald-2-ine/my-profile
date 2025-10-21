@@ -98,11 +98,11 @@ Frontend Developer | Computer Science Graduate
 
 📫 Connect with me:
 
-Twitter
+Twitter - https://x.com/GUgonabo?t=f9Vo13jQphZt-2L0TqG6-w&s=09
 
-GitHub
+GitHub - https://github.com/Gerald-2-ine/my-profile
 
-LinkedIn
+LinkedIn - https://www.linkedin.com/in/geraldine-ugonabo
 
 💭 Reflections
 
